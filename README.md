@@ -1,2 +1,7 @@
-# react-native-firebase-auth
-authentication system with react native and firebase
+# react native firebase authentication, firestore, google signin
+
+# npm require
+
+```
+npm install firebase
+```
