@@ -12,7 +12,9 @@ npm install firebase
 ```
 npm install --save @react-native-firebase/app
 ```
-
+```
+npm install --save react-native-fbsdk-next
+```
 # yarn require
 
 ```
