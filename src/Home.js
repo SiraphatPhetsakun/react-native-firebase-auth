@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { SafeAreaView, StyleSheet, Text, Button } from 'react-native';
+
 import auth from '@react-native-firebase/auth';
 
 
@@ -19,26 +20,31 @@ const Home = ({navigation}) => {
     return subscriber; // unsubscribe on unmount
   }, []);
 
+  const SignOutUser = () => {
+    console.log(auth.GoogleAuthProvider)
+    auth()
+    .signOut()
+    .then(() => console.log('User signed out!'));
+  }
+
   if (initializing) return null;
 
   if (!user) {
     return (
       <SafeAreaView style={styles.root}>
-      <Button title='Login' onPress={()=> navigation.navigate('Login')} />
-      <Button title='signin' onPress={()=> navigation.navigate('Signin')} />
-      <Button title='FireStoreScreen' onPress={()=> navigation.navigate('FireStore')} />
-      <Button title='GoogleScreen' onPress={()=> navigation.navigate('GoogleSignIn')} />
-    </SafeAreaView>
+        <Button title='Login' onPress={()=> navigation.navigate('Login')} />
+        <Button title='signin' onPress={()=> navigation.navigate('Signin')} />
+        <Button title='FireStoreScreen' onPress={()=> navigation.navigate('FireStore')} />
+        <Button title='GoogleScreen' onPress={()=> navigation.navigate('GoogleSignIn')} />
+        <Button title='FaceBookScreen' onPress={()=> navigation.navigate('FaceBookSignIn')} />
+      </SafeAreaView>
     );
   }
 
   return (
     <SafeAreaView style={styles.root}>
-      <Button title='Login' onPress={()=> navigation.navigate('Login')} />
-      <Button title='signin' onPress={()=> navigation.navigate('Signin')} />
-      <Button title='FireStoreScreen' onPress={()=> navigation.navigate('FireStore')} />
-      <Button title='GoogleScreen' onPress={()=> navigation.navigate('GoogleSignIn')} />
       <Text>Welcome {user.email}</Text>
+      <Button title='Logout' onPress={SignOutUser} />
     </SafeAreaView>
   );
 };

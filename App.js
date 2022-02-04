@@ -7,6 +7,8 @@ import LoginScreen from './src/LoginScreen';
 import SignInScreen from './src/SigninScreen';
 import FireStoreScreen from './src/FireStoreScreen';
 import GoogleScreen from './src/GoogleScreen';
+import FaceBookScreen from './src/FaceBookScreen';
+
 import Home from './src/Home';
 
 
@@ -20,7 +22,8 @@ const App = () => {
           <Stack.Screen name="Login" component={LoginScreen} options={{ header: () => null }} />
           <Stack.Screen name="Signin" component={SignInScreen} options={{ header: () => null }} />
           <Stack.Screen name="FireStore" component={FireStoreScreen} options={{ header: () => null }} />
-          <Stack.Screen name="GoogleSignIn" component={GoogleScreen} options={{ header: () => null }} />   
+          <Stack.Screen name="GoogleSignIn" component={GoogleScreen} options={{ header: () => null }} />
+          <Stack.Screen name="FaceBookSignIn" component={FaceBookScreen} options={{ header: () => null }} />
         </Stack.Navigator>
     </NavigationContainer>
   )

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">basicAuthen</string>
+    <string name="facebook_app_id">480223613510926</string>
+    <string name="fb_login_protocol_scheme">fb480223613510926</string>
 </resources>

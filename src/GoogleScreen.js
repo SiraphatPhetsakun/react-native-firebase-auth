@@ -14,7 +14,7 @@ const GoogleScreen = ({navigation}) => {
       });
 
     const GoogleSignInAsync = async () => {
-          // Get the users ID token
+        // Get the users ID token
         const { idToken } = await GoogleSignin.signIn();
 
         // Create a Google credential with the token
@@ -36,7 +36,7 @@ const GoogleScreen = ({navigation}) => {
         <SafeAreaView style={styles.root}>
             <Button title='Google Sign in' onPress={GoogleSignInAsync} />
         </SafeAreaView>
-  );
+    );
 };
 
 const styles = StyleSheet.create({
